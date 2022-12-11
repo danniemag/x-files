@@ -1,0 +1,30 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Applicants</h1>
+
+<p>
+  <%= link_to "New applicant", new_applicant_path %>
+</p>
+
+<table id="applicants">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Project</th>
+      <th>Status</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @applicants.each do |applicant| %>
+    <tr>
+      <td><%= applicant.name %></td>
+      <td><%= applicant.project_title %></td>
+      <td><%= applicant.status.titleize %></td>
+      <td><%= link_to "Show this applicant", applicant %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+

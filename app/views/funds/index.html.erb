@@ -1,0 +1,24 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Funds</h1>
+
+<p><%= link_to "New fund", new_fund_path %></p>
+
+<table id="funds">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Total</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @funds.each do |fund| %>
+    <tr>
+      <td><%= fund.title %></td>
+      <td><%= fund.total %></td>
+      <td><%= link_to "Show this fund", fund %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

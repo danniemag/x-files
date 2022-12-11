@@ -1,0 +1,27 @@
+<div id="<%= dom_id applicant %>">
+  <p>
+    <strong>Name:</strong>
+    <%= applicant.name %>
+  </p>
+
+  <p>
+    <strong>Overview:</strong>
+    <%= applicant.overview %>
+  </p>
+
+  <p>
+    <strong>Funding:</strong>
+    <%= applicant.funding %>
+  </p>
+
+  <p>
+    <strong>Project:</strong>
+    <%= applicant.project.title %>
+  </p>
+
+  <p>
+    <strong>Status:</strong>
+    <%= applicant.status.titleize %>
+  </p>
+
+</div>

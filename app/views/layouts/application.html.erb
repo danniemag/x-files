@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChangeX App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+
+    <nav>
+      <strong>
+        <%= link_to "Applicants", applicants_path %>
+        |
+        <%= link_to "Funds", funds_path %>
+        |
+        <%= link_to "Payments", payments_path %>
+        |
+        <%= link_to "Projects", projects_path %>
+      </strong>
+    </nav>
+
+    <hr>
+
+    <%= yield %>
+  </body>
+</html>

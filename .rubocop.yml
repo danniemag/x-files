@@ -1,0 +1,20 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.1
+
+Rails/I18nLocaleTexts:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 10
+
+Style/Documentation:
+  Exclude:
+    - 'db/migrate/*.rb'
