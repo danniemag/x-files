@@ -12,9 +12,9 @@
   <tbody>
   <% changelogs.reverse.each do |cl| %>
     <tr>
-      <td><%= cl.created_at %></td>
-      <td><%= cl.previous_status %></td>
-      <td><%= cl.next_status %></td>
+      <td><%= I18n.l cl.created_at, format: :datetime %></td>
+      <td><%= I18n.t("activerecord.attributes.applicant.statuses.#{cl.previous_status}") %></td>
+      <td><%= I18n.t("activerecord.attributes.applicant.statuses.#{cl.next_status}") %></td>
       <td><%= cl.reason %></td>
     </tr>
   <% end %>
