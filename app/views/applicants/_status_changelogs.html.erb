@@ -1,0 +1,22 @@
+<h3>Status Changelog</h3>
+
+<table id="changelog">
+  <thead>
+  <tr>
+    <th>Date</th>
+    <th>Previous Status</th>
+    <th>Next Status</th>
+    <th>Reason</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% changelogs.reverse.each do |cl| %>
+    <tr>
+      <td><%= cl.created_at %></td>
+      <td><%= cl.previous_status %></td>
+      <td><%= cl.next_status %></td>
+      <td><%= cl.reason %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
