@@ -1,3 +1,18 @@
+# DANNIE'S MESSAGE: 
+Thank you for the opportunity of letting me join this proccess. Here's some useful information.
+And sorry for the delay. I totally forgot that my parents were coming this weekend. :)
+
+Exercise 01:
+- PR: https://github.com/seliksy/x-files/pull/1
+
+Exercise 02:
+- PR: https://github.com/seliksy/x-files/pull/2
+
+Exercise 03:
+- PR: https://github.com/seliksy/x-files/pull/3
+
+_____________________________________
+
 Thanks for your interest in joining the ChangeX team!
 
 [Jump to the exercise instructions](#exercise-instructions)
