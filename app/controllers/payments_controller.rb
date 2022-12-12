@@ -24,8 +24,8 @@ class PaymentsController < ApplicationController
   end
 
   def projects
-    results.map do |person|
-      ::ProjectPresenter.new(person).to_hash
+    results.map do |project|
+      ::ProjectPresenter.new(project).to_hash
     end
   end
 
