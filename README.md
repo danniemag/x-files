@@ -1,7 +1,3 @@
-# DANNIE'S MESSAGE: 
-Thank you for the opportunity of letting me join this proccess. Here's some useful information.
-And sorry for the delay. I totally forgot that my parents were coming this weekend. :)
-
 Exercise 01:
 - PR: https://github.com/seliksy/x-files/pull/1
 
