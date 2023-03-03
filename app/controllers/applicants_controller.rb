@@ -3,6 +3,7 @@
 # Controller for CRUD management of Applicants
 class ApplicantsController < ApplicationController
   before_action :set_applicant, only: %i[show edit update destroy]
+  before_action :set_next_status, only: :update
 
   # GET /applicants
   def index
@@ -53,8 +54,17 @@ class ApplicantsController < ApplicationController
     @applicant = Applicant.find(params[:id])
   end
 
+  def set_next_status
+    params['applicant']['status_changelogs_attributes']['0'].merge!(
+      { next_status: applicant_params[:status] }
+    )
+  end
+
   # Only allow a list of trusted parameters through.
   def applicant_params
-    params.require(:applicant).permit(:name, :overview, :funding, :project_id, :status)
+    params.require(:applicant).permit(:name, :overview, :funding, :project_id, :status,
+                                      status_changelogs_attributes: %i[
+                                        id previous_status next_status reason applicant_id _destroy
+                                      ])
   end
 end

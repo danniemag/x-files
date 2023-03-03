@@ -31,3 +31,16 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      applicant:
+        statuses:
+          applied: Applied
+          initial_review: Initial Review
+          more_information_required: More Information Required
+          declined: Declined
+          approved: Approved
+  time:
+    formats:
+      default: "%Y-%m-%d"
+      datetime: "%Y-%m-%d %I:%M:%S"

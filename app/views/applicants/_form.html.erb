@@ -1,4 +1,4 @@
-<%= form_with(model: applicant) do |form| %>
+<%= form_for @applicant do |form| %>
   <% if applicant.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(applicant.errors.count, "error") %> prohibited this applicant from being saved:</h2>
@@ -40,6 +40,15 @@
         )
       %>
     </div>
+
+    <%= form.fields_for :status_changelogs, StatusChangelog.new do |log| %>
+      <%= log.hidden_field :previous_status, value: applicant.status %>
+
+      <div>
+        <%= log.label :reason, style: "display: block", class: 'reasons' %>
+        <%= log.text_area :reason %>
+      </div>
+    <% end %>
   <% end %>
 
   <div>

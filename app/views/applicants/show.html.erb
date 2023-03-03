@@ -7,4 +7,6 @@
   <%= link_to "Back to applicants", applicants_path %>
 
   <%= button_to "Destroy this applicant", @applicant, method: :delete %>
+
+  <%= render 'status_changelogs', changelogs: @applicant.status_changelogs %>
 </div>
